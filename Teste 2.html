@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+
+<script>
+
+	function mostra(resultado) {
+
+	        document.write(resultado);
+	    
+	    }
+
+	let num = parseInt(prompt("Digite um número: "));
+
+	let a = 0;
+	let b = 1;
+	let c = 0;
+	let pertence = false;
+
+	while (c < num) {
+	  c = a + b;
+	  a = b;
+	  b = c;
+	  if (c === num) {
+	    pertence = true;
+	  }
+	}
+
+	if (pertence) {
+	  mostra(`${num} pertence à sequência de Fibonacci.`);
+	} else {
+	  mostra(`${num} não pertence à sequência de Fibonacci.`);
+	}
+
+</script>

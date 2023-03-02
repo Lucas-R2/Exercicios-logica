@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+
+
+<script>
+
+	function mostra(resultado) {
+
+        document.write(resultado);
+    }
+
+	let distancia = 100; 
+	let velocidadeCarro = 110; 
+	let velocidadeCaminhao = 80; 
+	let tempoPedagio = 5/60; 
+
+	// tempo necessário para os veículos se cruzarem na rodovia em horas
+	let tempoCruzamento = distancia / (velocidadeCarro + velocidadeCaminhao);
+
+	// distância percorrida pelo carro até o ponto de cruzamento em km
+	let distanciaCarro = velocidadeCarro * tempoCruzamento;
+
+	// distância percorrida pelo caminhão até o ponto de cruzamento em km
+	let distanciaCaminhao = velocidadeCaminhao * (tempoCruzamento + tempoPedagio + tempoPedagio);
+
+	// verificação de qual veículo estará mais próximo de Ribeirão Preto no ponto de cruzamento
+	if (distanciaCarro > distanciaCaminhao) {
+	  mostra("O caminhão estará mais próximo de Ribeirão Preto.");
+	} else {
+	  mostra("O carro estará mais próximo de Ribeirão Preto.");
+	}
+
+/*Primeiro, defi as variáveis que serão utilizadas na solução (distancia, velocidades do carro e caminhão, e o tempo adicional do pedágio).
+
+Em seguida, calculei o tempo necessário para os veículos se cruzarem na rodovia utilizando a fórmula de tempo = distância / velocidade relativa entre os veículos que é a soma das suas velocidades.
+
+Calculei a distância percorrida por cada veículo até o ponto de cruzamento utilizando a fórmula de distância = velocidade x tempo. Para o caminhão, adicionei o tempo adicional necessário para passar em cada um dos dois pedágios.
+
+Por fim, comparei as distâncias percorridas pelo carro e pelo caminhão e verificando qual veículo estará mais próximo de Ribeirão Preto no ponto de cruzamento. Se a distância percorrida pelo carro for maior do que a do caminhão, então o caminhão estará mais próximo da cidade de Ribeirão Preto. Caso contrário, o carro estará mais próximo.*/
+	
+</script>
+
